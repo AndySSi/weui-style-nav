@@ -1,4 +1,4 @@
-﻿# WeUI Style Navigation
+# WeUI Style Navigation
 
 为 Vue / HTML 中的 WeUI 类名提供装饰与源码跳转的 VS Code 扩展。
 
@@ -68,6 +68,8 @@ weui-style-nav/
 ```
 
 ## 开发与验证
+
+接手开发或准备迭代前，请先阅读 [开发交接文档](DEVELOPMENT_HANDOFF.md)，了解初衷、设计边界、已知限制及版本同步流程。
 
 ```powershell
 pnpm format:check
