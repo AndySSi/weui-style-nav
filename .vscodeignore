@@ -1,0 +1,10 @@
+test/**
+*.vsix
+node_modules/**
+pnpm-lock.yaml
+.github/**
+.vscode/**
+.gitignore
+.prettierignore
+.prettierrc.json
+.editorconfig

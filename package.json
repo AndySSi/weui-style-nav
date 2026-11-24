@@ -1,0 +1,65 @@
+{
+  "name": "weui-style-navigation",
+  "displayName": "WeUI Style Navigation",
+  "description": "Decorate WeUI classes and navigate to the installed WeUI CSS in Vue and HTML.",
+  "publisher": "weui-quick-start",
+  "version": "0.1.0",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0",
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@9.9.0",
+  "devDependencies": {
+    "prettier": "3.10.1",
+    "weui": "2.6.26"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.cjs",
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "package": "pnpm dlx @vscode/vsce@4.1.1 package --no-dependencies --out weui-style-navigation.vsix",
+    "install:local": "code --install-extension weui-style-navigation.vsix --force"
+  },
+  "activationEvents": [
+    "onLanguage:vue",
+    "onLanguage:html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndySSi/weui-style-nav.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AndySSi/weui-style-nav/issues"
+  },
+  "homepage": "https://github.com/AndySSi/weui-style-nav#readme",
+  "contributes": {
+    "commands": [
+      {
+        "command": "weuiStyles.reload",
+        "title": "WeUI: Reload Style Index"
+      }
+    ],
+    "configuration": {
+      "title": "WeUI Styles",
+      "properties": {
+        "weuiStyles.enabled": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Enable WeUI style navigation and hover."
+        },
+        "weuiStyles.decorations": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Show solid underlines on matched WeUI classes."
+        }
+      }
+    }
+  }
+}
